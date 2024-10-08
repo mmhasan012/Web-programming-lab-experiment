@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .menu-title {
+      background: linear-gradient(to right, #8fce00, #8fce00);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    .table-custom {
+      background-color: #d9ead3;
+      border-radius: 100px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .table-custom thead {
+      background-color: #ff7e5f;
+      color: #fff;
+    }
+    .table-custom tbody tr:nth-child(even) {
+      background-color: #d5d8dc;
+    }
+    .table-custom tbody tr:hover {
+      background-color: #85c1e9;
+    }
+    .price-cell {
+      font-weight: bold;
+      color: #17202a;
+    }
+    .category-header {
+      background-color: #feb47b;
+      color: #17202a;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="text-center mb-4 menu-title">Restaurant Menu</h2>
+    <div class="table-responsive">
+      <table class="table table-custom">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="category-header">
+            <td colspan="4">Breakfast</td>
+          </tr>
+          <tr>
+            <td>Breakfast</td>
+            <td>Pancakes</td>
+            <td>Fluffy pancakes served with syrup and butter.</td>
+            <td class="price-cell">$5.00</td>
+          </tr>
+          <tr>
+            <td>Breakfast</td>
+            <td>Omelette</td>
+            <td>Three-egg omelette with your choice of fillings.</td>
+            <td class="price-cell">$7.00</td>
+          </tr>
+          <tr class="category-header">
+            <td colspan="4">Lunch</td>
+          </tr>
+          <tr>
+            <td>Lunch</td>
+            <td>Grilled Cheese Sandwich</td>
+            <td>Classic grilled cheese with melted cheddar.</td>
+            <td class="price-cell">$6.00</td>
+          </tr>
+          <tr>
+            <td>Lunch</td>
+            <td>Caesar Salad</td>
+            <td>Fresh romaine lettuce with Caesar dressing and croutons.</td>
+            <td class="price-cell">$8.00</td>
+          </tr>
+          <tr class="category-header">
+            <td colspan="4">Dinner</td>
+          </tr>
+          <tr>
+            <td>Dinner</td>
+            <td>Spaghetti Bolognese</td>
+            <td>Classic Italian pasta with a rich meat sauce.</td>
+            <td class="price-cell">$12.00</td>
+          </tr>
+          <tr>
+            <td>Dinner</td>
+            <td>Grilled Salmon</td>
+            <td>Grilled salmon fillet served with vegetables.</td>
+            <td class="price-cell">$15.00</td>
+          </tr>
+          <tr class="category-header">
+            <td colspan="4">Snacks</td>
+          </tr>
+          <tr>
+            <td>Snacks</td>
+            <td>Nachos</td>
+            <td>Tortilla chips topped with melted cheese and jalapenos.</td>
+            <td class="price-cell">$5.50</td>
+          </tr>
+          <tr>
+            <td>Snacks</td>
+            <td>Chicken Wings</td>
+            <td>Spicy chicken wings served with a side of ranch.</td>
+            <td class="price-cell">$7.50</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
