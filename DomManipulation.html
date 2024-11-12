@@ -20,28 +20,55 @@
 <script src="script.js"></script>
 </body>
 </html>
+
+
 //CSS
-body {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-background-color: #e0e0e0;
-margin: 0;
-transition: background-color 0.3s;
+
+#items {
+list-style-type: none;
+padding: 0;
 } #
-container {
-text-align: center;
+themeToggleButton, #inputText, #addButton {
+padding: 10px;
+margin: 10px;
+border-radius: 8px;
+border: none;
+outline: none;
+font-size: 16px;
+transition: background-color 0.3s, color 0.3s;
+} #
+addButton, #themeToggleButton {
+cursor: pointer;
+background-color: #007bff;
+color: #ffffff;
+} #
+items li {
+padding: 10px;
+margin: 5px 0;
+background: #f1f1f1;
+border-radius: 5px;
+cursor: pointer;
+transition: background 0.3s;
+} .t
+heme-dark {
+background-color: #333;
+color: #fff;
+} .t
+heme-dark #container {
+background: #444;
+} .t
+heme-dark #items li {
+background: #555;
+} .t
+heme-light {
+background-color: #e0e0e0;
+color: #333;
+} .t
+heme-light #container {
 background: #ffffff;
-padding: 30px;
-border-radius: 12px;
-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-transition: background 0.3s, color 0.3s;
 }
+
 //JavaScript:
-J
-avaScript
 document.addEventListener('DOMContentLoaded', () => {
 const themeToggleButton = document.getElementById('themeToggleButton');
 const addButton = document.getElementById('addButton');
