@@ -39,3 +39,47 @@ border-radius: 12px;
 box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 transition: background 0.3s, color 0.3s;
 }
+//JavaScript:
+J
+avaScript
+document.addEventListener('DOMContentLoaded', () => {
+const themeToggleButton = document.getElementById('themeToggleButton');
+const addButton = document.getElementById('addButton');
+const inputText = document.getElementById('inputText');
+const items = document.getElementById('items');
+let currentTheme = 'light';
+const switchTheme = () => {
+if (currentTheme === 'light') {
+document.body.classList.remove('theme-light');
+document.body.classList.add('theme-dark');
+currentTheme = 'dark';
+} else {
+document.body.classList.remove('theme-dark');
+document.body.classList.add('theme-light');
+currentTheme = 'light';
+}}
+;
+const addItem = () => {
+const inputValue = inputText.value.trim();
+if (inputValue) {
+const newItem = document.createElement('li');
+newItem.textContent = inputValue;
+newItem.addEventListener('click', () => {
+newItem.remove();
+});
+items.appendChild(newItem);
+inputText.value = '';
+} else {
+alert('Please enter a valid item.');
+}}
+;
+themeToggleButton.addEventListener('click', switchTheme);
+addButton.addEventListener('click', addItem);
+inputText.addEventListener('keypress', (e) => {
+if (e.key === 'Enter') {
+addItem();
+}}
+);
+// Initialize the theme
+document.body.classList.add('theme-light');
+})
