@@ -76,3 +76,29 @@ eturn response.json();
 loadingText.style.display = 'none';
 data.forEach(product => {
 const productElement = document.createElement('div');
+productElement.classList.add('col-md-4', 'product-card');
+const productImage = document.createElement('img');
+productImage.classList.add('product-image');
+productImage.src = product.image;
+productImage.alt = product.title;
+const productName = document.createElement('h2');
+productName.classList.add('product-name');
+productName.textContent = product.title;
+const productPrice = document.createElement('p');
+productPrice.classList.add('product-price');
+productPrice.textContent = `$${product.price}`;
+const productDescription = document.createElement('p');
+productDescription.classList.add('product-description');
+productDescription.textContent = product.description;
+productElement.appendChild(productImage);
+productElement.appendChild(productName);
+productElement.appendChild(productPrice);
+productElement.appendChild(productDescription);
+productsContainer.appendChild(productElement);
+});
+})
+.catch(error => {
+loadingText.textContent = 'Failed to load products';
+console.error('There was a problem with the fetch operation:', error);
+});
+});
